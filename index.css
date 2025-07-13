@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: small;
+  font-family: "Helvetica", "Arial", "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: #000000;
+  padding: 15px;
+}
+header {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 60px;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 30px;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* عشان يبقى فوق المحتوى */
+}
+
+header img {
+  width: 60px;
+  border-radius: 20px;
+  margin-right: auto; 
+}
+header nav {
+  display: flex;
+  gap: 30px;
+
+  flex: 1;
+}
+
+nav a {
+  padding: 10px 15px;
+  margin-left: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #6a6762;
+}
+.intro {
+  width: 100%;
+  height: 600px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  background-image: url("https://www.h1912.com/cdn/shop/files/bulgari_feb25.jpg?v=1740756334&width=1495");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.intro h1 {
+  font-size: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(255, 255, 255);
+}
+.intro p {
+  color: rgb(255, 255, 255);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+.overlay {
+  background: radial-gradient(
+    rgba(0, 0, 0, 0.9) 0%,
+    /* في النص لون أبيض قوي */ rgba(255, 255, 255, 0) 100%,
+    /* تدريج يخف */ rgba(255, 255, 255, 0) 100% 
+  );
+  padding: 40px 60px;
+  border-radius: 25px;
+  text-align: center;
+}
+.image-strip {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.item {
+  flex-shrink: 0;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.item img {
+  height: 150px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.item img:hover {
+  transform: scale(1.1);
+}
+
+.item p {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+
+.item button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.item button:hover {
+  background-color: #908383;
+  color: rgb(0, 0, 0);
+}
+.secondpic {
+  display: flex;
+  gap: 30px;
+  height: 500px;
+}
+
+.secondpic .left {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.secondpic .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.secondpic .left img:hover {
+  transform: scale(1.05);
+}
+
+
+.secondpic .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+
+.secondpic .right a {
+  display: block;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: calc(50% - 10px);
+}
+
+
+.secondpic .right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.secondpic .right img:hover {
+  transform: scale(1.05);
+}
+
+.new-collection {
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px;
+}
+
+
+.image-box {
+  position: relative; 
+  display: inline-block; 
+}
+
+
+.image-box img {
+  height: 250px; 
+  width: auto; 
+  object-fit: cover; 
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+
+.image-box:hover img {
+  transform: scale(1.05); 
+}
+
+
+.caption {
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white; 
+  padding: 10px;
+  font-size: 14px;
+  text-align: center; 
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 8px 8px;
+}
+
+
+.image-box:hover .caption {
+  opacity: 1; 
+}
+.serv-u {
+  width: 100%;
+  height: 600px;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://unsplash.com/photos/w8RSCxAZA8U/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTMyfHxqZXdlbHJ5fGVufDB8fHx8MTc1MTY1MzE2MHww&force=true");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.serv-u h1 {
+  font-size: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(255, 255, 255);
+}
+.serv-u p {
+  color: rgb(255, 255, 255);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+.overlay-serv {
+  background: radial-gradient(
+    rgba(0, 0, 0, 0.9) 0%,
+   rgba(255, 255, 255, 0) 100%,
+     rgba(255, 255, 255, 0) 100% 
+  );
+  padding: 40px 60px;
+  border-radius: 25px;
+  text-align: center;
+}
+.three-columns {
+  display: flex; 
+  gap: 20px;
+  padding: 40px; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  align-items: stretch; 
+}
+
+.column {
+  flex: 1;
+  min-width: 250px; 
+}
+
+.text-column {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  padding: 20px;
+}
+
+.text-column h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.text-column p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+.text-column button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.text-column button:hover {
+  background-color: #333;
+}
+
+
+.image-column img {
+  width: 100%; 
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
